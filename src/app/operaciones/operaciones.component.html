@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+  <title>Calculadora</title>
+</head>
+<div class="container">
+
+  <body>
+    <br>
+    <h1 class="text-center titulo">Parcial II Desarrollo Web </h1>
+    <hr>
+
+    <div class="container">
+      <h2 class="text-center color">Mi Calculadora en Angular</h2>
+      <p class="text-center Instruccion">{{Operacion}}</p>
+      <br>
+
+      <div class="row">
+        <div class="col"> </div>
+        <div class="col-2">
+          <label for="cantidadone">Valor 1</label>
+          <input [(ngModel)]="cantidadone" type="number" class="form-control" (input)="ingresar2($event)">
+          <div class="row">
+            <p class="text-center Instruccion">{{opracion1}}</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <label for="cantidadtwo">Valor 2</label>
+          <input [(ngModel)]="cantidadtwo" type="number" class="form-control" (input)="ingresar($event)">
+          <div class="row">
+            <p class="text-center Instruccion">{{opracion2}}</p>
+          </div>
+
+        </div>
+        <div class="col"> </div>
+        <br><br><br>
+        <button (click)="multiplication()" class="btn btn-outline-dark" [disabled]="habilitar">Multiplicar </button>
+        <button (click)="Divicion()" class="btn btn-outline-dark" [disabled]="habilitar">Divicion</button>
+      </div><br><br>
+
+      <h5 id="operation">Suma: </h5>
+      <p> ( {{ cantidadone }} + {{ cantidadtwo }} ) = <strong>{{cantidadone + cantidadtwo}}</strong></p>
+      <h5 id="operation">Resta: </h5>
+      <p> ( {{ cantidadone }} - {{ cantidadtwo }} ) = <strong>{{cantidadone - cantidadtwo}}</strong></p>
+
+
+      <p style="text-align: center;" *ngIf="resultado1 >0">El Resultado de la multiplicación es:
+        <strong>{{resultado1}}</strong>
+      </p><br>
+      <p style="text-align: center;" *ngIf="resultado2 >0">El Resultado de la División es:
+        <strong>{{resultado2}}</strong>
+      </p>
+
+    </div>
+
+  </body>
+</div>
+
+</html>
