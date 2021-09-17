@@ -36,7 +36,8 @@
         <br><br><br>
         <button (click)="multiplication()" class="btn btn-outline-dark" [disabled]="habilitar">Multiplicar </button>
         <button (click)="Divicion()" class="btn btn-outline-dark" [disabled]="habilitar">Divicion</button>
-      </div><br><br>
+        <button (click)="limpiar()" class="btn btn-outline-dark" [disabled]="habilitar">Limpiar</button>
+      </div><br>
 
       <h5 id="operation">Suma: </h5>
       <p> ( {{ cantidadone }} + {{ cantidadtwo }} ) = <strong>{{cantidadone + cantidadtwo}}</strong></p>

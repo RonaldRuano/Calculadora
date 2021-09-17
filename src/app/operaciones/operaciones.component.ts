@@ -36,6 +36,16 @@ export class OperacionesComponent implements OnInit {
     this.opracion1=(<HTMLInputElement>event.target).value
 
   }
+  limpiar(){
+    this.cantidadtwo = 0;
+    this.cantidadone = 0;
+    this.opracion2 = "Valores no agregados";
+    this.opracion1 = "Valores no agregados";
+    this.Operacion = "Suma y Resta se realizan automaticamente al llenar los campos,"+
+   " para Multiplicación y División debe presionar los botones";
+   this.resultado1 = 0;
+   this.resultado2 = 0;
+  }
 
 
   constructor() {
